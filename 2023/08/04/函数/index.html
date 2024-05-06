@@ -1,0 +1,91 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content=""/><meta name="keyword"/><title>函数
+-
+Hexo
+-
+
+</title><link rel="icon" href="/img/favicon.ico"/>
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/helpers.css">
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+<script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 7.2.0"></head><body><div class="loading-wrapper" data-loading="data-loading"><div class="loading"><span></span><span></span><span></span></div></div><div class="page" data-filter="data-filter"><div class="head" data-show="data-show"><header class="head-header"><div class="head-author"><a class="head-author-link" href="/">Hexo</a></div><div class="head-right"><button class="bar-wrap" id="bar-wrap-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div class="head-item"><a class="search-button head-item-link"><span>Search</span>
+<i class="icon icon-search"></i></a></div><div class="head-item"><a class="head-item-link" href="/about">关于</a></div></div></header>
+<div class="menubar-head" id="menubar"><ul class="menubar-ul"><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/Posts/">Posts1</a></li><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/Posts2/">Posts2</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><i class="icon icon-archive"></i>
+<a class="menubar-link" href="/archives">Archives</a></li><li class="menubar-item"><i class="icon icon-tags"></i>
+<a class="menubar-link" href="/tags">Tags</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><a class="menubar-link" href="/about"><span>关于</span></a></li></ul><div class="menu-search-box search-button"><div>Search</div>
+<i class="icon icon-search"></i></div></div></div><div class="main" data-page="post"><article class="post" id="post"><header class="post-head"><h1 class="post-title"><a class="title" href="/2023/08/04/%E5%87%BD%E6%95%B0/">函数</a></h1></header><div class="post-meta"><div class="post-date"><time class="post-time" itemprop="datePublished" title="2023-08-04 23:47:10" datetime="2023-08-04T15:47:10.000Z">2023-08-04</time></div>|
+<div class="post-tag"></div>
+<div class="post-visit"><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span>hits</span></div></div><div class="post-info"><div class="post-word-count">This article contains 818 words.</div>
+<div class="post-cc">Copyright: 署名-非商业性使用-相同方式共享
+
+|
+<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a></div></div><div class="article-entry" itemprop="articleBody"><h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h2 id="函数构成"><a href="#函数构成" class="headerlink" title="函数构成"></a>函数构成</h2><p>函数原型  例<code>int sum(int a,int b);</code>  它的作用是告诉编译器有一个名叫sum的函数，返回值类型是<code>int</code>,参数是<code>int ，int</code>，注：参数只需要给出类型即可。另外，在函数定义中，只有参数的类型是必要的。例如<code>int sum(int,int)</code>。<br>即</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int sum(int a,int b);</span><br><span class="line">int max(int,int);</span><br><span class="line">int main()&#123;</span><br><span class="line">&#125;</span><br><span class="line">int sum(int x,int y)&#123;	</span><br><span class="line">&#125;</span><br><span class="line">int max(int,int)&#123;</span><br><span class="line">&#125;</span><br><span class="line">~~~  </span><br><span class="line">上述代码可以正常运行</span><br><span class="line">函数体</span><br><span class="line">## 返回值</span><br></pre></td></tr></table></figure>
+<p>#include&lt;stdio.h&gt;<br>int imin(int x,int y); </p>
+<p>int main(void){<br>    int a,b,c;<br>    scanf(“%d %d”,&amp;a,&amp;b);<br>    printf(“%d和%d中最小的数是：%d”,a,b,imin(a,b)); </p>
+<p>}<br>int imin(int x,int y){<br>    int min&#x3D;0;<br>    if(x&gt;y){<br>        min&#x3D;y;<br>    }else{<br>        min&#x3D;x;<br>    }<br>    return min;<br>}</p>
+<pre><code>关键字`return`后面的表达式的值就是该函数的返回值。  
+该代码最后一句`return min`中变量`min`的值就是函数的返回值。因为`min`是int型的变量，所以`imin()`的函数类型是int。    
+return语句把`min`的值传回给了主函数(而不是把min和值都传回给主函数，因为变量`min`是函数imin()的局部变量，主函数不知道`min`的存在)。故需要主函数中的一个变量去接收这个值。  
+所以应当把返回的值赋给主函数的一个变量。演示代码没有这么做。给出操作方法，即`int less=imin(a,b);`。  
+1111111111111111111111111111111111111111  
+以下是文言一心的解释：  
+在 C 语言中，函数参数是通过值传递的，也就是说，当你调用一个函数时，实际上是将参数的值复制一份传递给函数，而不是传递参数本身。
+
+在你给出的代码中，`imin(a, b)` 调用会把 `a` 和 `b` 的值复制一份传递给 `imin` 函数。在 `imin` 函数内部，这些复制的值被用来进行比较，然后返回最小值。这个返回的最小值是通过 `return` 语句返回的，它会被赋给调用函数 `main` 中的 `c` 变量。  
+return 语句是在 imin 函数内部执行的，它会将函数的结果返回给调用函数，也就是 main 函数。然后，这个结果会被赋给 c 变量。所以，当你执行 c = imin(a, b); 时，imin(a, b) 的返回值会被赋给 c。
+
+因此，当你调用 `c = imin(a, b);` 时，你实际上是将 `a` 和 `b` 的值复制给 `imin` 函数，然后使用 `imin` 函数返回的最小值来设置 `c`。
+
+&quot;函数调用imin(a,b)只是把两个变量的值拷贝了一份&quot;这句话的意思是，当你调用函数时，你传递的是变量的值，而不是变量本身。因此，在函数内部，你实际上是在操作这些值的复制品，而不是原始变量。这就是为什么你可以在函数内部改变参数的值，但不会影响原始变量的值。  
+11111111111111111111111111111111111  
+不可以  
+    `imin(a,b);`  调用函数，判断处最小值，在原函数中，这个最小值赋给了变量min  
+    `lesser=min`  主函数中min不存在，故该操作错误  
+注：x，y是imin()的局部变量。a,b是函数main()的局部变量。
+</code></pre>
+</div></article><aside class="post-widget"><h4>In this article</h4><nav class="post-toc-wrap" id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0"><span class="post-toc-number">1.</span> <span class="post-toc-text">函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E5%87%BD%E6%95%B0%E6%9E%84%E6%88%90"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">函数构成</span></a></li></ol></li></ol></nav></aside></div><footer class="footer-nav"><div class="footer"><div class="back-top" id="back-top" title="Back to top"><i class="icon icon-chevron-bar-up"></i></div><div class="footer-content"><div class="icp"><img src="/img/icp.png" alt="icp Record"/><a class="icp-text" target="_blank" href="https://beian.miit.gov.cn/">京ICP备xxxxxxxx号</a></div><div><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv">?</span>
+PV
+</span><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">?</span>
+UV</span></div>
+
+Copyright &copy;
+2020<span class="time-divide">-</span>2024
+John Doe.
+
+Power by
+<a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+and
+<a href="https://github.com/Cerallin/hexo-theme-yuzu" target="_blank" rel="external nofollow" title="v3.2.4">Theme Yuzu</a>.</div></div></footer>
+<script>window.config = {
+  url_root: '/',
+  meta_path: 'meta.json',
+};
+</script>
+<script src="/js/theme/back-to-top.js"></script>
+
+
+<script src="/js/theme/clipboard.js"></script>
+
+
+<script src="/js/theme/loading.js"></script>
+
+
+<script src="/js/theme/navbar.js"></script>
+
+<script src="/js/theme/search.js"></script>
+
+<script src="/js/theme/toc.js"></script>
+<script>window.onload = function () {
+  for (const moduleName in Theme) {
+    const module = Theme[moduleName];
+    module.register();
+  }
+};</script></div><div class="search-modal" id="search-modal"><div class="card"><div class="card-head"><div class="search-box"><input class="search-input" id="search-input" placeholder="search"/><div class="search-button" id="search-button"><div class="icon icon-search"></div></div></div><div class="close-button"><div class="icon icon-x"></div></div></div><div class="card-body"><div class="search-count">search.total<span id="search-count-num">0</span>search result(s) in total.</div><div class="search-result" id="search-result"></div></div></div></div></body></html>

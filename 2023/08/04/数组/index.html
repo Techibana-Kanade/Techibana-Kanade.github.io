@@ -1,0 +1,82 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content=""/><meta name="keyword"/><title>数组
+-
+Hexo
+-
+
+</title><link rel="icon" href="/img/favicon.ico"/>
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/helpers.css">
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+<script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 7.2.0"></head><body><div class="loading-wrapper" data-loading="data-loading"><div class="loading"><span></span><span></span><span></span></div></div><div class="page" data-filter="data-filter"><div class="head" data-show="data-show"><header class="head-header"><div class="head-author"><a class="head-author-link" href="/">Hexo</a></div><div class="head-right"><button class="bar-wrap" id="bar-wrap-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div class="head-item"><a class="search-button head-item-link"><span>Search</span>
+<i class="icon icon-search"></i></a></div><div class="head-item"><a class="head-item-link" href="/about">关于</a></div></div></header>
+<div class="menubar-head" id="menubar"><ul class="menubar-ul"><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/Posts/">Posts1</a></li><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/Posts2/">Posts2</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><i class="icon icon-archive"></i>
+<a class="menubar-link" href="/archives">Archives</a></li><li class="menubar-item"><i class="icon icon-tags"></i>
+<a class="menubar-link" href="/tags">Tags</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><a class="menubar-link" href="/about"><span>关于</span></a></li></ul><div class="menu-search-box search-button"><div>Search</div>
+<i class="icon icon-search"></i></div></div></div><div class="main" data-page="post"><article class="post" id="post"><header class="post-head"><h1 class="post-title"><a class="title" href="/2023/08/04/%E6%95%B0%E7%BB%84/">数组</a></h1></header><div class="post-meta"><div class="post-date"><time class="post-time" itemprop="datePublished" title="2023-08-04 23:47:10" datetime="2023-08-04T15:47:10.000Z">2023-08-04</time></div>|
+<div class="post-tag"></div>
+<div class="post-visit"><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span>hits</span></div></div><div class="post-info"><div class="post-word-count">This article contains 791 words.</div>
+<div class="post-cc">Copyright: 署名-非商业性使用-相同方式共享
+
+|
+<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a></div></div><div class="article-entry" itemprop="articleBody"><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h4 id="什么是数组"><a href="#什么是数组" class="headerlink" title="什么是数组"></a>什么是数组</h4><p>在C语言中，数组是一种用于存储相同类型数据元素的数据结构。数组由一组连续的内存位置组成，每个位置可以存储一个数据元素。数组中的每个元素都有一个唯一的索引，用于访问和修改数组中的元素</p>
+<h4 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h4><p>标准格式 &lt;类型&gt;数组名称[元素数量]<br>特点：一旦创建，无法修改。  只能存储相同类型的元素。</p>
+<p>数组 <code>a[x]</code> 中的x叫做下标(索引)，是从零开始的。<br>如：int a[10]，表示创建一个长度为10.类型为int的数组。它包含a[0]-a[9]。  </p>
+<p>例子</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)&#123;</span><br><span class="line">	int number[100];</span><br><span class="line">	int cnt=0;</span><br><span class="line">	int x=0;</span><br><span class="line">	double sum=0; </span><br><span class="line">	scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">	while(x!=-1)&#123;</span><br><span class="line">		number[cnt]=x;</span><br><span class="line">		sum +=x;</span><br><span class="line">		cnt++; </span><br><span class="line">		scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">	&#125;</span><br><span class="line">	printf(&quot;这一组数的总数是：%d&quot;,cnt);</span><br><span class="line">	printf(&quot;这一组数的平均数是：%.2f&quot;,sum/cnt);</span><br><span class="line">	printf(&quot;大于平均数的数有&quot;);</span><br><span class="line">	for(int i=0;i&lt;cnt;i++)&#123;</span><br><span class="line">		if(number[i]&gt;sum/cnt)</span><br><span class="line">		printf(&quot;%d&quot;,number[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>其中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">while(x!=-1)&#123;</span><br><span class="line">	number[cnt]=x;</span><br><span class="line">	sum +=x;</span><br><span class="line">	cnt++; </span><br><span class="line">	scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>第一句 <code>scanf(&quot;%d&quot;,&amp;x);</code> 是为了给x赋值，使得程序能够加入while循环。<br>whlie循环内的 <code>scanf(&quot;%d&quot;,&amp;x);</code> 是为了让程序继续读取输入的数字。对于 <code>scanf(&quot;%d&quot;,&amp;x);</code> 无论你输入多少个数字，只可以读取输入一个数字。所以要不断循环（这样你可以输入一个数值按一次回车，也可以一次输入全部数字，让<code>scanf</code>自动循环读取），直到读取完所有数值，然后输入-1跳出循环。</p>
+<p>特别的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">for(int i=0;i&lt;cnt;i++)&#123;</span><br><span class="line">	if(number[i]&gt;sum/cnt)</span><br><span class="line">	printf(&quot;%d&quot;,number[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此处<code>i&lt;cnt</code>,而不是<code>i&lt;=cnt</code>,否则会发生数组越界。要特别强调”数组的索引最大值是数组长度-1”.<br>如果我输入5个数，则此处的cnt为5，那么索引为0-4，即number[0], number[1], number[2], number[3], number[4]。若是使得<code>i&lt;=cnt</code>，则为会出现number[5]。而number[5]是不存在的，会导致访问数组的一个不存在的位置。</p>
+<p>这是一个有趣的例子，输入任意数量的在0-9(包含)之间的数，统计它们出现的次数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main(void)&#123;</span><br><span class="line">	int x;</span><br><span class="line">	int number[10]; </span><br><span class="line">	int i=0;</span><br><span class="line">	for(i=0;i&lt;10;i++)&#123;</span><br><span class="line">		number[i]=0;</span><br><span class="line">	&#125;</span><br><span class="line">	scanf(&quot;%d&quot;,&amp;x);</span><br><span class="line">	while(x!=-1)&#123;</span><br><span class="line">		if(x&gt;=0&amp;&amp;x&lt;=9)&#123;</span><br><span class="line">			number[x]++;</span><br><span class="line">		&#125;</span><br><span class="line">		scanf(&quot;%d&quot;,&amp;x);	</span><br><span class="line">	&#125;</span><br><span class="line">	for(i=0;i&lt;10;i++)&#123;</span><br><span class="line">		printf(&quot;数字%d出现了%d次\n&quot;,i,number[i]);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此处要注意，记得给数组初始化，变量也是，否则数组(变量)将包含未定义的值，即垃圾值。因为创建变量时，系统会给变量分配一个地址，如果不初始化，那么这个地址原理的值是多少，变量的值就是多少。</p>
+</div></article><aside class="post-widget"><h4>In this article</h4><nav class="post-toc-wrap" id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%95%B0%E7%BB%84"><span class="post-toc-number">1.</span> <span class="post-toc-text">数组</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E7%BB%84"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">什么是数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">数组的定义</span></a></li></ol></li></ol></li></ol></li></ol></nav></aside></div><footer class="footer-nav"><div class="footer"><div class="back-top" id="back-top" title="Back to top"><i class="icon icon-chevron-bar-up"></i></div><div class="footer-content"><div class="icp"><img src="/img/icp.png" alt="icp Record"/><a class="icp-text" target="_blank" href="https://beian.miit.gov.cn/">京ICP备xxxxxxxx号</a></div><div><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv">?</span>
+PV
+</span><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">?</span>
+UV</span></div>
+
+Copyright &copy;
+2020<span class="time-divide">-</span>2024
+John Doe.
+
+Power by
+<a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+and
+<a href="https://github.com/Cerallin/hexo-theme-yuzu" target="_blank" rel="external nofollow" title="v3.2.4">Theme Yuzu</a>.</div></div></footer>
+<script>window.config = {
+  url_root: '/',
+  meta_path: 'meta.json',
+};
+</script>
+<script src="/js/theme/back-to-top.js"></script>
+
+
+<script src="/js/theme/clipboard.js"></script>
+
+
+<script src="/js/theme/loading.js"></script>
+
+
+<script src="/js/theme/navbar.js"></script>
+
+<script src="/js/theme/search.js"></script>
+
+<script src="/js/theme/toc.js"></script>
+<script>window.onload = function () {
+  for (const moduleName in Theme) {
+    const module = Theme[moduleName];
+    module.register();
+  }
+};</script></div><div class="search-modal" id="search-modal"><div class="card"><div class="card-head"><div class="search-box"><input class="search-input" id="search-input" placeholder="search"/><div class="search-button" id="search-button"><div class="icon icon-search"></div></div></div><div class="close-button"><div class="icon icon-x"></div></div></div><div class="card-body"><div class="search-count">search.total<span id="search-count-num">0</span>search result(s) in total.</div><div class="search-result" id="search-result"></div></div></div></div></body></html>

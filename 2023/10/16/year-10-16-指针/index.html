@@ -1,0 +1,72 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="description" content=""/><meta name="keyword"/><title>指针
+-
+Hexo
+-
+
+</title><link rel="icon" href="/img/favicon.ico"/>
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/helpers.css">
+
+<script src="/js/clipboard/clipboard.min.js"></script>
+
+
+<script src="/js/bootstrap.js"></script>
+
+<script async="async" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><meta name="generator" content="Hexo 7.2.0"></head><body><div class="loading-wrapper" data-loading="data-loading"><div class="loading"><span></span><span></span><span></span></div></div><div class="page" data-filter="data-filter"><div class="head" data-show="data-show"><header class="head-header"><div class="head-author"><a class="head-author-link" href="/">Hexo</a></div><div class="head-right"><button class="bar-wrap" id="bar-wrap-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button><div class="head-item"><a class="search-button head-item-link"><span>Search</span>
+<i class="icon icon-search"></i></a></div><div class="head-item"><a class="head-item-link" href="/about">关于</a></div></div></header>
+<div class="menubar-head" id="menubar"><ul class="menubar-ul"><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/Posts/">Posts1</a></li><li class="menubar-item"><i class="icon icon-chevron-right"></i>
+<a class="menubar-link" href="/categories/Posts2/">Posts2</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><i class="icon icon-archive"></i>
+<a class="menubar-link" href="/archives">Archives</a></li><li class="menubar-item"><i class="icon icon-tags"></i>
+<a class="menubar-link" href="/tags">Tags</a></li><li class="menubar-item" data-border="data-border"></li><li class="menubar-item"><a class="menubar-link" href="/about"><span>关于</span></a></li></ul><div class="menu-search-box search-button"><div>Search</div>
+<i class="icon icon-search"></i></div></div></div><div class="main" data-page="post"><article class="post" id="post"><header class="post-head"><h1 class="post-title"><a class="title" href="/2023/10/16/year-10-16-%E6%8C%87%E9%92%88/">指针</a></h1></header><div class="post-meta"><div class="post-date"><time class="post-time" itemprop="datePublished" title="2023-10-16 19:19:30" datetime="2023-10-16T11:19:30.000Z">2023-10-16</time></div>|
+<div class="post-tag"></div>
+<div class="post-visit"><span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span>hits</span></div></div><div class="post-info"><div class="post-word-count">This article contains 487 words.</div>
+<div class="post-cc">Copyright: 署名-非商业性使用-相同方式共享
+
+|
+<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/2.5/cn/">CC BY-NC-SA 2.5 CN</a></div></div><div class="article-entry" itemprop="articleBody"><h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><p>指针是一个值为地址的变量。<br>指针变量的值是地址，就如int类型变量的值为整型那样。</p>
+<h5 id="指针的定义-声明"><a href="#指针的定义-声明" class="headerlink" title="指针的定义(声明)"></a>指针的定义(声明)</h5><p>ptrtype *  ptrname; &#x2F;&#x2F;指针类型 间接运算符 指针名称<br>如<code>int * a;</code>  &#x2F;&#x2F; 定义了一个类型为int的指针a，a是指向int类型变量的指针。</p>
+<h5 id="如何使用指针"><a href="#如何使用指针" class="headerlink" title="如何使用指针"></a>如何使用指针</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">int i = 5;</span><br><span class="line">int * p;    //1</span><br><span class="line">p=&amp;i;       //在指针变量中存储i的地址</span><br><span class="line">int x;</span><br><span class="line">x=*p;       //2</span><br><span class="line">printf(&quot;%d&quot;,x) //打印i的地址上的值</span><br></pre></td></tr></table></figure>
+<p><code>p=&amp;i</code>这一步是把i的地址存到指针变量p里<br><code>*p</code>的作用是把p所指向的地址上的值调出<br>上述备注1到2之内的代码可以合为<code>x=i;</code></p>
+<h2 id="指针的算数运算"><a href="#指针的算数运算" class="headerlink" title="指针的算数运算"></a>指针的算数运算</h2><p>指针可以进行这些算术运算操作: <code>++、--、+、-</code><br>假设ptr是一个指向地址1000的整型指针，是一个32位的整数，对其进行<code>ptr++</code>操作，指针将会指向地址1004;ptr每增加一次，ptr都将指向下一个元素。即当前位置往后移 4 字节。该操作不会影响存放在地址上的值。<br>概括如下：<br>    指针每递增一次，指针就会指向下一个元素的存储单元<br>    指针每递减一次，指针就会指向上一个元素的存储单元<br>    ？存储一个元素的地址为一个存储单元？<br>    ？如数字4，地址为1000，而5的地址为1004，因为4在内存中占4个字节，一个存储单元为4。？<br>    指针在递增和递减时跳跃的字节数取决于指针所指向变量数据类型长度，比如 int 就是 4 个字节。<br>假设对指向数组元素的指针进行<code>++</code>操作，可以让指针移动到数组的下一个元素  </p>
+<p>同理，对指向数组元素的指针进行<code>--</code>操作，可以让指针移动到数组的上一个元素 </p>
+</div></article><aside class="post-widget"><h4>In this article</h4><nav class="post-toc-wrap" id="post-toc"><ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#%E6%8C%87%E9%92%88"><span class="post-toc-number">1.</span> <span class="post-toc-text">指针</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E6%8C%87%E9%92%88%E7%9A%84%E5%AE%9A%E4%B9%89-%E5%A3%B0%E6%98%8E"><span class="post-toc-number">1.0.0.0.1.</span> <span class="post-toc-text">指针的定义(声明)</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E6%8C%87%E9%92%88"><span class="post-toc-number">1.0.0.0.2.</span> <span class="post-toc-text">如何使用指针</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#%E6%8C%87%E9%92%88%E7%9A%84%E7%AE%97%E6%95%B0%E8%BF%90%E7%AE%97"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">指针的算数运算</span></a></li></ol></li></ol></nav></aside></div><footer class="footer-nav"><div class="footer"><div class="back-top" id="back-top" title="Back to top"><i class="icon icon-chevron-bar-up"></i></div><div class="footer-content"><div class="icp"><img src="/img/icp.png" alt="icp Record"/><a class="icp-text" target="_blank" href="https://beian.miit.gov.cn/">京ICP备xxxxxxxx号</a></div><div><span id="busuanzi_container_site_pv"><span id="busuanzi_value_site_pv">?</span>
+PV
+</span><span id="busuanzi_container_site_uv"><span id="busuanzi_value_site_uv">?</span>
+UV</span></div>
+
+Copyright &copy;
+2020<span class="time-divide">-</span>2024
+John Doe.
+
+Power by
+<a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>
+and
+<a href="https://github.com/Cerallin/hexo-theme-yuzu" target="_blank" rel="external nofollow" title="v3.2.4">Theme Yuzu</a>.</div></div></footer>
+<script>window.config = {
+  url_root: '/',
+  meta_path: 'meta.json',
+};
+</script>
+<script src="/js/theme/back-to-top.js"></script>
+
+
+<script src="/js/theme/clipboard.js"></script>
+
+
+<script src="/js/theme/loading.js"></script>
+
+
+<script src="/js/theme/navbar.js"></script>
+
+<script src="/js/theme/search.js"></script>
+
+<script src="/js/theme/toc.js"></script>
+<script>window.onload = function () {
+  for (const moduleName in Theme) {
+    const module = Theme[moduleName];
+    module.register();
+  }
+};</script></div><div class="search-modal" id="search-modal"><div class="card"><div class="card-head"><div class="search-box"><input class="search-input" id="search-input" placeholder="search"/><div class="search-button" id="search-button"><div class="icon icon-search"></div></div></div><div class="close-button"><div class="icon icon-x"></div></div></div><div class="card-body"><div class="search-count">search.total<span id="search-count-num">0</span>search result(s) in total.</div><div class="search-result" id="search-result"></div></div></div></div></body></html>
