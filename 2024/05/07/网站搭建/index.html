@@ -13,7 +13,7 @@
   
   <title>
     
-      Archives 
+      网站搭建 
       
       
       |
@@ -112,129 +112,148 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2024</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">网站搭建</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2024-05-09 13:21:51
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/web-build/" title="web_build">
+                    #web_build
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h1 id="网站搭建指南"><a href="#网站搭建指南" class="headerlink" title="网站搭建指南"></a>网站搭建指南</h1><h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>安装Node.js<br><br>目的是<br></p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>安装Git<br></p>
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>1.安装hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g </span><br></pre></td></tr></table></figure>
+<p>使用上述指令安装hexo</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &quot;filename&quot;</span><br></pre></td></tr></table></figure>
+<p>新建一个网站</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/05/06/%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2024-05-09 13:21:51
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/web-build/" title="web_build">
+                        #web_build
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="网站搭建">
-        <div class="time-m-d">05-07</div>
-        <div class="title">
-          <a href="/2024/05/07/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/">
-            <span>网站搭建</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="">
-        <div class="time-m-d">05-06</div>
-        <div class="title">
-          <a href="/2024/05/06/%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89/">
-            <span></span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="">
-        <div class="time-m-d">05-06</div>
-        <div class="title">
-          <a href="/2024/05/06/11.22%E7%9A%84%E4%B8%80%E4%BA%9B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E7%AC%94%E8%AE%B0/">
-            <span></span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello World">
-        <div class="time-m-d">05-06</div>
-        <div class="title">
-          <a href="/2024/05/06/hello-world/">
-            <span>Hello World</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="测试">
-        <div class="time-m-d">10-24</div>
-        <div class="title">
-          <a href="/2023/10/24/year-10-24-%E6%B5%8B%E8%AF%95/">
-            <span>测试</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97"><span class="toc-text">网站搭建指南</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5"><span class="toc-text">第一步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5"><span class="toc-text">第二步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5"><span class="toc-text">第三步</span></a></li></ol></li></ol></li></ol></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="结构">
-        <div class="time-m-d">10-17</div>
-        <div class="title">
-          <a href="/2023/10/17/year-10-17-%E7%BB%93%E6%9E%84/">
-            <span>结构</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="指针">
-        <div class="time-m-d">10-16</div>
-        <div class="title">
-          <a href="/2023/10/16/year-10-16-%E6%8C%87%E9%92%88/">
-            <span>指针</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="C语言基础">
-        <div class="time-m-d">08-04</div>
-        <div class="title">
-          <a href="/2023/08/04/year-08-04-C1/">
-            <span>C语言基础</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="函数">
-        <div class="time-m-d">08-04</div>
-        <div class="title">
-          <a href="/2023/08/04/%E5%87%BD%E6%95%B0/">
-            <span>函数</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="数组">
-        <div class="time-m-d">08-04</div>
-        <div class="title">
-          <a href="/2023/08/04/%E6%95%B0%E7%BB%84/">
-            <span>数组</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="C语言">
-        <div class="time-m-d">08-01</div>
-        <div class="title">
-          <a href="/2023/08/01/year-08-01-C%E8%AF%AD%E8%A8%80/">
-            <span>C语言</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -491,6 +510,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA + '&url=' + http%3A%2F%2Fexample.com%2F2024%2F05%2F07%2F%25E7%25BD%2591%25E7%25AB%2599%25E6%2590%25AD%25E5%25BB%25BA%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2024/05/07/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
